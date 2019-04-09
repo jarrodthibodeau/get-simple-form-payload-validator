@@ -17,7 +17,7 @@ const handler = async (req, res) => {
 
     if (formIsValid) {
         console.log('uno');
-        post(form_destination, { name, email, message });
+        post(form_destination, { name, email, message, redirect_to });
     } else {
         console.log('dos');
         redirect(res, 302, redirect_to);
