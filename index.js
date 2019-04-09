@@ -1,11 +1,9 @@
+const { send, createError, run, json } = require('micro');
 
+const handler = async (req, res) => {
+    const { myPostData } = await json(req);
 
-module.exports = (req, res) => {
- 
-    console.log('req: ', req);
-    console.log('payloadddd: ', req.query);
-    console.log('params? :', req.params);
-    console.log('SOMETHIGN!: ', req.body);
-
-    res.send(200);
+    console.log(myPostData);
 }
+
+module.exports = handler;
