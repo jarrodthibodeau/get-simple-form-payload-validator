@@ -13,7 +13,7 @@ const handler = async (req, res) => {
         message
     } = await parse(req);
 
-    const formIsValid = validator.isAlpha(name) && validator.isEmail(email);
+    const formIsValid = validator.isAlpha(name.replace(' ', '')) && validator.isEmail(email);
 
     if (formIsValid) {
         await post(form_destination, { name, email, message, redirect_to });
