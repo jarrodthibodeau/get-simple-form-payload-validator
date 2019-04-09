@@ -20,6 +20,7 @@
     "axios": "^0.18.0",
     "micro": "^9.3.3",
     "micro-cors": "^0.1.1",
+    "micro-redirect": "^1.0.0",
     "urlencoded-body-parser": "^2.0.1"
   }
 }

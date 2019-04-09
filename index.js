@@ -1,14 +1,20 @@
 const cors = require('micro-cors')();
 const parse = require('urlencoded-body-parser');
-const { send } = require('micro');
 const { post } = require('axios');
+const redirect = require('micro-redirect')
 
 const handler = async (req, res) => {
-   const data = await parse(req);
+    const data = await parse(req);
+
+    let formIsValid = true;
 
     console.log('the body: ', data);
 
-    return send(res, 200, 'hihihihi');
+
+
+
+
+    redirect(res, 302, data[redirect_to]);
 }
 
 module.exports = cors(handler);
