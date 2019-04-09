@@ -1,0 +1,27 @@
+{
+  "name": "get-simple-form-payload-validator",
+  "version": "1.0.0",
+  "description": "Lambda built for validating get-simple-form payload to reduce the obnoxious amounts of spam you get.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jarrodthibodeau/get-simple-form-payload-validator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jarrodthibodeau/get-simple-form-payload-validator/issues"
+  },
+  "homepage": "https://github.com/jarrodthibodeau/get-simple-form-payload-validator#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "micro": "^9.3.3",
+    "micro-cors": "^0.1.1",
+    "micro-redirect": "^1.0.0",
+    "urlencoded-body-parser": "^2.0.1",
+    "validator": "^10.11.0"
+  }
+}
