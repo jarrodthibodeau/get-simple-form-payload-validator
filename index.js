@@ -4,6 +4,7 @@ module.exports = (req, res) => {
  
     console.log('req: ', req);
     console.log('payloadddd: ', req.query);
+    console.log('params? :', req.params);
 
-    reply(200);
+    res.send(200);
 }
