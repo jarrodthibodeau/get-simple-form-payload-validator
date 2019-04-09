@@ -1,4 +1,4 @@
-const { send, createError, run, json } = require('micro');
+const { send, createError, run, text } = require('micro');
 const cors = require('micro-cors')();
 
 const handler = async (req, res) => {
@@ -6,7 +6,7 @@ const handler = async (req, res) => {
     let myPostData;
 
     try {
-        myPostData  = await json(req);
+        myPostData  = await text(req);
     } catch (e) {
         return send(res, 400, 'you suck bitch');
     }
