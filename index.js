@@ -1,9 +1,9 @@
 const { send, createError, run, json } = require('micro');
 
-const handler = async (req, res) => {
+module.exports = async (req, res) => {
     const { myPostData } = await json(req);
 
-    console.log(myPostData);
-}
+    console.log('the body: ', myPostData);
 
-module.exports = handler;
+    return 'yayayayayaya';
+}
