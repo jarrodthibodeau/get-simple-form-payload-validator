@@ -16,14 +16,10 @@ const handler = async (req, res) => {
     const formIsValid = validator.isAlpha(name) && validator.isEmail(email);
 
     if (formIsValid) {
-        console.log('uno');
-        post(form_destination, { name, email, message, redirect_to })
-            .then(res => console.log(res))
-            .catch(err => console.log(err));
-    } else {
-        console.log('dos');
-        redirect(res, 302, redirect_to);
+        await post(form_destination, { name, email, message, redirect_to });
     }
+
+    redirect(res, 302, redirect_to);
 }
 
 module.exports = cors(handler);
