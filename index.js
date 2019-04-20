@@ -4,6 +4,7 @@ const { post } = require('axios');
 const redirect = require('micro-redirect');
 const validator = require('validator');
 
+
 const handler = async (req, res) => {
     const {
         name,
@@ -13,7 +14,7 @@ const handler = async (req, res) => {
         message
     } = await parse(req);
 
-    const formIsValid = validator.isAlpha(name.replace(' ', '')) && validator.isEmail(email);
+    const formIsValid = validator.isAlpha(name.replace(' ', '')) && validator.isEmail(email) && !validator.contains(message, 'http');
 
     if (formIsValid) {
         await post(form_destination, { name, email, message, redirect_to });
